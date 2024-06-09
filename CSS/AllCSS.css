@@ -1,2 +1,16 @@
 /*引入 Google Font*/
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+  }
+
+  
+  .container {
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+  
