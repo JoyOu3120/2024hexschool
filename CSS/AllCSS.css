@@ -4,182 +4,278 @@ http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*引入 Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 200,
-  'opsz' 24
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 200,
+        'opsz' 24
 }
 
-a{
-  color: black;
-  text-decoration: none;
+a {
+    color: black;
+    text-decoration: none;
 }
+
 body {
     font-family: "Noto Sans TC", sans-serif;
     line-height: 1.5;
-  }
+}
 
-  .container {
+.container {
     max-width: 1296px;
     margin: 0 auto;
-  }
+}
 
-  *, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
-  }
+}
 
 /*RWD*/
 @media (max-width: 767px) {
-  .header{
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .menu{
-    flex-direction: column;
-    flex-wrap: wrap;  
-    align-items: center;
-    gap: 12px;
-  }
-  .subtitle-list{
-    flex-direction: column;
-    flex-wrap: wrap;  
-    align-items: center;
-  }
+    .header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .subtitle-list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 
 /* menu 樣式*/
-.header 
-{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.menu 
-{
+
+.menu {
     list-style: none;
     display: flex;
-    gap:35px;
+    gap: 35px;
     margin-right: 50px;
 }
+
 .logo {
-margin-right: 50px;
+    margin-right: 50px;
 }
 
 /*banner 區塊*/
 /*參考自：https://codepen.io/j811108/pen/gOJPMxq*/
-.title{
-  display: flex;
-  flex-direction: column;  
-  margin-bottom: 24px;
-  position: relative;
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    position: relative;
 }
-.title-text{
-  text-align: center;
-  font-size: 24px;
-  line-height: 28.8px;
-  margin: 59px 72px;
+
+.title-text {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 59px 72px;
 }
-.banner{
-   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #FAFAFA;
+
+.banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
 }
+
 .hightlight {
-  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
-  background-repeat: no-repeat;
-  background-position: bottom 1px right 0px;
-  padding-right: 16px;
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: bottom 1px right 0px;
+    padding-right: 16px;
 }
+
 .hightlight-sm {
-  background: none;
+    background: none;
 }
 
 
-.subtitle-list{
-  max-width: 636px;
-  display: flex;
-  gap: 40px;
-}
-.subtitle{
-  width: 50%;
-  height: 84px;
-  text-align: center;
-}
-.subtitle p{
-  font-size: 16px;
-  line-height: 24px;
-  color: #3B3B3B;
-}
-.subtitle p:nth-child(2){
-  width: 24px;
-  color: #5B5B5B;
-  border-bottom: 2px solid #C1C1C1;
-  margin: 0 auto;
+.subtitle-list {
+    max-width: 636px;
+    display: flex;
+    gap: 40px;
 }
 
-.quote1{
-  width: 72px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.subtitle {
+    width: 50%;
+    height: 84px;
+    text-align: center;
 }
-.quote2{
-  width: 72px;
- position: absolute;
-  right: 0;
-  bottom: 0;
+
+.subtitle p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #3B3B3B;
+}
+
+.subtitle p:nth-child(2) {
+    width: 24px;
+    color: #5B5B5B;
+    border-bottom: 2px solid #C1C1C1;
+    margin: 0 auto;
+}
+
+.quote1 {
+    width: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quote2 {
+    width: 72px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -191,46 +287,46 @@ margin-right: 50px;
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .work-card {
+}
+
+.work-card {
     width: 46%;
     margin: 1%;
-  }
-  
-  .work-img {
+}
+
+.work-img {
     max-width: 100%;
     border-radius: 10px;
     border: 1px solid #ddd;
     display: block;
-  }
-  
-  .work-card-text {
+}
+
+.work-card-text {
     margin-top: 10px;
     margin-left: 15px;
     line-height: 1.8;
-  }
-  
-  .work-card-text h2 {
+}
+
+.work-card-text h2 {
     width: 100%;
     font-size: 28px;
     font-weight: 700;
     color: #3b3b3b;
-  }
-  
-  .work-card-text p {
+}
+
+.work-card-text p {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
     color: #919191;
-  }
-  
-  .work-tags-group {
+}
+
+.work-tags-group {
     margin-left: 15px;
     margin-top: 28px;
-  }
-  
-  .work-tags-group li {
+}
+
+.work-tags-group li {
     display: inline-block;
     padding: 5px 14px;
     margin-right: 15px;
@@ -239,5 +335,4 @@ margin-right: 50px;
     color: #3b3b3b;
     background-color: #f1f1f1;
     font-weight: bold;
-  }
-  
+}
