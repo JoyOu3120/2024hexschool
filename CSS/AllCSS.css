@@ -51,6 +51,18 @@ table {
 /*引入 Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
 body {
     font-family: "Noto Sans TC", sans-serif;
     line-height: 1.5;
@@ -65,28 +77,114 @@ body {
     box-sizing: border-box;
   }
 
-/* 修改 menu 轉水平*/
+/*RWD*/
+@media (max-width: 767px) {
+  .header{
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .menu{
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: center;
+    gap: 12px;
+  }
+  .subtitle-list{
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: center;
+  }
+}
+
+/* menu 樣式*/
 .header 
 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .menu 
 {
     list-style: none;
     display: flex;
     gap:35px;
+    margin-right: 50px;
+}
+.logo {
+margin-right: 50px;
 }
 
-.menu li a {
-  color: black;
-  text-decoration: none;
+/*banner 區塊*/
+/*參考自：https://codepen.io/j811108/pen/gOJPMxq*/
+.title{
+  display: flex;
+  flex-direction: column;  
+  margin-bottom: 24px;
+  position: relative;
 }
+.title-text{
+  text-align: center;
+  font-size: 24px;
+  line-height: 28.8px;
+  margin: 59px 72px;
+}
+.banner{
+   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+.hightlight {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+  background-repeat: no-repeat;
+  background-position: bottom 1px right 0px;
+  padding-right: 16px;
+}
+.hightlight-sm {
+  background: none;
+}
+
+
+.subtitle-list{
+  max-width: 636px;
+  display: flex;
+  gap: 40px;
+}
+.subtitle{
+  width: 50%;
+  height: 84px;
+  text-align: center;
+}
+.subtitle p{
+  font-size: 16px;
+  line-height: 24px;
+  color: #3B3B3B;
+}
+.subtitle p:nth-child(2){
+  width: 24px;
+  color: #5B5B5B;
+  border-bottom: 2px solid #C1C1C1;
+  margin: 0 auto;
+}
+
+.quote1{
+  width: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quote2{
+  width: 72px;
+ position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
 
 /*作品 WORK 區塊*/
-
 .work-cards-group {
     width: 100%;
     display: flex;
