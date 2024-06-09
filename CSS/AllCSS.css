@@ -4,6 +4,7 @@ http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html,
 body,
 div,
@@ -122,7 +123,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -132,14 +133,15 @@ table {
 }
 
 /*引入 Google Font*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 200,
-        'opsz' 24
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 24;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
 }
 
 a {
@@ -147,10 +149,6 @@ a {
     text-decoration: none;
 }
 
-body {
-    font-family: "Noto Sans TC", sans-serif;
-    line-height: 1.5;
-}
 
 .container {
     max-width: 1296px;
@@ -163,27 +161,7 @@ body {
     box-sizing: border-box;
 }
 
-/*RWD*/
-@media (max-width: 767px) {
-    .header {
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
 
-    .menu {
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .subtitle-list {
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-}
 
 /* menu 樣式*/
 .header {
@@ -192,11 +170,17 @@ body {
     align-items: center;
 }
 
-.menu {
+.menu-list {
     list-style: none;
     display: flex;
     gap: 35px;
     margin-right: 50px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    margin: 0;
 }
 
 .logo {
@@ -224,7 +208,9 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .hightlight {
@@ -237,7 +223,6 @@ body {
 .hightlight-sm {
     background: none;
 }
-
 
 .subtitle-list {
     max-width: 636px;
@@ -254,13 +239,13 @@ body {
 .subtitle p {
     font-size: 16px;
     line-height: 24px;
-    color: #3B3B3B;
+    color: #3b3b3b;
 }
 
 .subtitle p:nth-child(2) {
     width: 24px;
-    color: #5B5B5B;
-    border-bottom: 2px solid #C1C1C1;
+    color: #5b5b5b;
+    border-bottom: 2px solid #c1c1c1;
     margin: 0 auto;
 }
 
@@ -279,6 +264,37 @@ body {
 }
 
 
+/*RWD*/
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .subtitle-list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+    }
+}
 
 /*作品 WORK 區塊*/
 .work-cards-group {
