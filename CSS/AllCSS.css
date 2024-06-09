@@ -301,11 +301,19 @@ a {
 }
 
 /*作品 WORK 區塊*/
-.work-cards-group {
+.work {
     width: 100%;
     display: flex;
     align-content: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.work-cards-group {
+    max-width: 1296px;
+    display: flex;
     flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
     margin-bottom: 30px;
 }
