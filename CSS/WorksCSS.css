@@ -1,0 +1,66 @@
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+  
+  .work-cards-group {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .work-card {
+    width: 46%;
+    margin: 1%;
+  }
+  
+  .work-img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: block;
+  }
+  
+  .work-card-text {
+    margin-top: 10px;
+    margin-left: 15px;
+    line-height: 1.8;
+  }
+  
+  .work-card-text h2 {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b3b3b;
+  }
+  
+  .work-card-text p {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #919191;
+  }
+  
+  .work-tags-group {
+    margin-left: 15px;
+    margin-top: 28px;
+  }
+  
+  .work-tags-group li {
+    display: inline-block;
+    padding: 5px 14px;
+    margin-right: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #3b3b3b;
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
