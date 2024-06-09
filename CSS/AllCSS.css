@@ -139,16 +139,15 @@ table {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 24;
 }
 
-body {
-    font-family: "Noto Sans TC", sans-serif;
-    line-height: 1.5;
-}
-
 a {
     color: black;
     text-decoration: none;
 }
 
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
 
 .container {
     max-width: 1296px;
@@ -170,7 +169,7 @@ a {
     align-items: center;
 }
 
-.menu-list {
+.menu {
     list-style: none;
     display: flex;
     gap: 35px;
@@ -179,8 +178,6 @@ a {
 
 .burger-menu {
     display: none;
-    flex-direction: column;
-    margin: 0;
 }
 
 .logo {
@@ -272,7 +269,7 @@ a {
         gap: 12px;
     }
 
-    .menu-list {
+    .menu {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
@@ -287,12 +284,12 @@ a {
 }
 
 @media (max-width: 480px) {
-    .burger-menu {
-        display: block;
+    .menu li {
+        display: none;
     }
 
-    .menu-list {
-        display: none;
+    .burger-menu {
+        display: block;
     }
 }
 
