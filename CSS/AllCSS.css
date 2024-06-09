@@ -1,16 +1,35 @@
 /*引入 Google Font*/
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
 
 body {
     font-family: "Noto Sans TC", sans-serif;
     line-height: 1.5;
   }
 
-  
   .container {
     max-width: 1296px;
     margin: 0 auto;
   }
-  
+
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+
+/* 修改 menu 轉水平*/
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu 
+{
+    list-style: none;
+    display: flex;
+    gap:35px;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+}
