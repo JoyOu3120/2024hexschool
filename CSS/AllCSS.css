@@ -1,3 +1,6 @@
+/*引入 Google Font*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
 /* 
 RESET CSS
 http://meyerweb.com/eric/tools/css/reset/ 
@@ -132,8 +135,6 @@ table {
     border-spacing: 0;
 }
 
-/*引入 Google Font*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 24;
@@ -199,6 +200,10 @@ a {
     margin: 59px 72px;
 }
 
+.title-text h4 {
+    margin-bottom: 10px;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -236,6 +241,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     color: #3b3b3b;
+    margin-top: 10px;
 }
 
 .subtitle p:nth-child(2) {
@@ -377,9 +383,9 @@ a {
 
 .page li {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
     text-align: center;
     margin: 5px;
     background-color: white;
