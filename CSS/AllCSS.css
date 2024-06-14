@@ -7,7 +7,6 @@ http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -135,10 +134,10 @@ table {
     border-spacing: 0;
 }
 
-
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 200, "opsz" 24;
+    font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 24;
 }
+
 
 body {
     font-family: "Noto Sans TC", sans-serif;
@@ -161,13 +160,15 @@ a {
     box-sizing: border-box;
 }
 
-/* menu 樣式*/
+/* header 樣式*/
 .header {
     display: flex;
     justify-content: center;
+    align-content: space-between;
     align-items: center;
     background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg");
     background-repeat: no-repeat;
+      border-bottom: 1px solid #F1F1F1;
     padding: 24px;
     background-position: 5% 50%;
 }
@@ -179,10 +180,11 @@ a {
 }
 
 .burger-menu {
-    display: none;
-    flex-direction: column;
-    margin: 0;
+     visibility: hidden;
 }
+
+
+
 
 /*banner 區塊*/
 /*參考自：https://codepen.io/j811108/pen/gOJPMxq*/
@@ -270,7 +272,8 @@ a {
     .header {
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 12px;
+        align-content: flex-end;
+        max-height: 55px;
     }
 
     .menu-list {
@@ -290,21 +293,15 @@ a {
         width: 100%;
         margin: 10px 0;
     }
-
-    .work-tags-group margin: 5px 0;
-}
-
-}
-
-@media (max-width: 480px) {
     .burger-menu {
-        display: block;
+      visibility: visible;
     }
-
-    .menu-list {
-        display: none;
+    .menu-list a {
+     visibility: hidden;
     }
 }
+
+
 
 /*作品 WORK 區塊*/
 .work {
@@ -455,13 +452,15 @@ a {
     }
 }
 
+
+
 .footer-social a {
     width: 306px;
     background: #ffffff;
     padding: 8px 24px;
     border-radius: 8px;
     border: 1px solid #c1c1c1;
-    margin-bottom: 24px;
+    margin: 24px 0;
     display: block;
     line-height: 30px;
     font-size: 20px;
