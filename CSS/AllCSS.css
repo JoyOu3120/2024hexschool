@@ -138,7 +138,6 @@ table {
     font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 24;
 }
 
-
 body {
     font-family: "Noto Sans TC", sans-serif;
     line-height: 1.5;
@@ -168,7 +167,7 @@ a {
     align-items: center;
     background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg");
     background-repeat: no-repeat;
-      border-bottom: 1px solid #F1F1F1;
+    border-bottom: 1px solid #f1f1f1;
     padding: 24px;
     background-position: 5% 50%;
 }
@@ -179,12 +178,78 @@ a {
     gap: 35px;
 }
 
-.burger-menu {
-     visibility: hidden;
+
+.menu-list li {
+    /* 基本樣式 */
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-list li:hover {
+    font-weight: bold;
+}
+
+.menu-list li::before {
+    /* 使用偽元素 ::before 來創建四個邊角的框線 */
+    content: '';
+    position: absolute;
+    top: 14%;
+    left: 12%;
+    width: 8px;
+    height: 8px;
+    border: 1px solid transparent;
+    /* 初始設置為透明邊框 */
+    transition: border-color 0.1s ease;
+    /* 過渡效果 */
+    /* 四個邊角的框線 */
+    border-width: 1.8px 0 0 1.8px;
+}
+
+.menu-list li:hover::before {
+    /* 滑鼠懸停時改變四個邊角的框線顏色 */
+    border-color: #adadad;
+    /* 滑鼠懸停時的框線顏色 */
+    -webkit-box-reflect: below 15px;
+    /*鏡像偏移*/
+}
+
+.menu-list li::after {
+    /* 使用偽元素 ::before 來創建四個邊角的框線 */
+    content: '';
+    position: absolute;
+    bottom: 14%;
+    right: 14%;
+    width: 8px;
+    height: 8px;
+    border: 1px solid transparent;
+    /* 初始設置為透明邊框 */
+    transition: border-color 0.1s ease;
+    /* 過渡效果 */
+    /* 四個邊角的框線 */
+    border-width: 0 1.8px 1.8px 0;
+}
+
+.menu-list li:hover::after {
+    /* 滑鼠懸停時改變四個邊角的框線顏色 */
+    border-color: #adadad;
+    /* 滑鼠懸停時的框線顏色 */
+    -webkit-box-reflect: above 15px;
+    /*鏡像偏移*/
 }
 
 
 
+.burger-menu {
+    visibility: hidden;
+}
 
 /*banner 區塊*/
 /*參考自：https://codepen.io/j811108/pen/gOJPMxq*/
@@ -293,15 +358,23 @@ a {
         width: 100%;
         margin: 10px 0;
     }
+
     .burger-menu {
-      visibility: visible;
+        visibility: visible;
     }
+
     .menu-list a {
-     visibility: hidden;
+        visibility: hidden;
+    }
+
+    .menu-list li::before {
+        visibility: hidden;
+    }
+
+    .menu-list li::after {
+        visibility: hidden;
     }
 }
-
-
 
 /*作品 WORK 區塊*/
 .work {
@@ -368,7 +441,6 @@ a {
     background-color: #f1f1f1;
     font-weight: bold;
     margin-bottom: 5px;
-
 }
 
 /* page 樣式*/
@@ -396,7 +468,6 @@ a {
     background-color: black;
     color: white;
 }
-
 
 /*footer 樣式*/
 .footer {
@@ -451,8 +522,6 @@ a {
         margin-bottom: 60px;
     }
 }
-
-
 
 .footer-social a {
     width: 306px;
